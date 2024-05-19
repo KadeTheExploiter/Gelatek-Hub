@@ -1364,12 +1364,12 @@ Global.Reanimation = function()
 			end
 
 			ts_wait()
-
-			hrp.CFrame = cf_zero
+			
 			hrp.AssemblyAngularVelocity = v3_zero
 			hrp.AssemblyLinearVelocity = v3_zero
-
-			ts_wait(0.175)
+			hrp.CFrame = rig_hrp.CFrame
+			
+			ts_wait(0.15)
 
 			is_flinging = false
 			tb_clear(targets_fling)
