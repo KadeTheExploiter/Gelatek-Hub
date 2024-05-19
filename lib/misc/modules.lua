@@ -1353,11 +1353,11 @@ Global.Reanimation = function()
 			is_flinging = true
 			for _,x in next, targets_fling do
 				local move_dir  = x[2].MoveDirection
-				local walkspeed = x[2].WalkSpeed
-				for i=0,25 do
+				local walkspeed = x[2].WalkSpeed/6
+				for i=0,35 do
 					hrp.AssemblyLinearVelocity = high_vel
 					hrp.AssemblyAngularVelocity = v3_zero
-					hrp.CFrame = x[1].CFrame * cf_new(move_dir * walkspeed/mt_random(1,3))
+					hrp.CFrame = x[1].CFrame * cf_new(x[1].AssemblyLinearVelocity/walkspeed)
 					
 					ts_wait()
 				end
