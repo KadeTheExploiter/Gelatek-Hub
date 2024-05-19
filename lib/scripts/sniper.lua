@@ -44,7 +44,6 @@ local Anim = "Idle"
 Effects = { }
 cam = workspace.CurrentCamera
 
-global.loadthis_stupidlib()
 local RbxUtility = LoadLibrary("RbxUtility")
 local Create = RbxUtility.Create
 local m = Create("Model"){
