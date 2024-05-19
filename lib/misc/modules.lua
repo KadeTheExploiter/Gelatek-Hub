@@ -18,6 +18,10 @@ local StarterGui = game:FindFirstChildOfClass("StarterGui")
 local UIS = game:FindFirstChildOfClass("UserInputService")
 local Tween = game:FindFirstChildOfClass("TweenService")
 
+if not getfenv(0).xyzkade then
+	getfenv(0).xyzkade = {}
+end
+
 local Global = getfenv(0).xyzkade
 getfenv(0).LoadLibrary = function(a)
 		local t = {}
