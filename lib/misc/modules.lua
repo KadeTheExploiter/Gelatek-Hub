@@ -1342,9 +1342,7 @@ Global.Reanimation = function()
 	local is_flinging   = false
 	local targets_fling = {}
 	global.send_the_fling = function(model)
-		print(model.Name)
-
-		if not is_flinging and model and hrp and hrp:IsDescendantOf(workspace) then
+		if flinging and not is_flinging and model and hrp and hrp:IsDescendantOf(workspace) then
 			local p_part = model:FindFirstChild("Head") or model.PrimaryPart or model:FindFirstChildOfClass("Part")
 			local huma = wait_for_child_of_class(model, "Humanoid", 2, "Humanoid")
 			targets_fling[#targets_fling+1]={p_part, huma}
