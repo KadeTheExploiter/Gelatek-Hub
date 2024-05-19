@@ -1543,7 +1543,7 @@ Global.Reanimation = function()
 	return {rig, disable_script}
 end
 
-Library.Create = function()
+Global.CreateFrame = function()
 	local KadesScreenGui = InstanceNew("ScreenGui")
 	local GelatekHub = InstanceNew("Frame")
 	local UICorner = InstanceNew("UICorner")
