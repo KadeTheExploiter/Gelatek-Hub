@@ -1409,11 +1409,12 @@ Global.Reanimation = function()
 			repeat ts_wait() until is_flinging == false
 		end
 
+		hrp.CFrame = tp_offset
+		
 		if not tpless then
-			hrp.CFrame = tp_offset
-			ts_wait(0.26)	
+			ts_wait(0.26)
 		end
-
+		
 		respawning = false
 		descendants = character:GetDescendants()
 		disable_localscripts(descendants)
